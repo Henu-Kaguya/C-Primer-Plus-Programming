@@ -1,0 +1,51 @@
+# Ignore general C++ build outputs
+*.exe
+*.o
+*.obj
+*.dll
+*.pdb
+*.suo
+*.user
+*.log
+*.tmp
+*.vsidx
+*.db
+*.opendb
+*.sdf
+*.ipch
+*.tlog
+*.recipe
+*.ilk
+*.iobj
+*.ipdb
+
+# Ignore Visual Studio directory
+.vs/
+[Dd]ebug/
+[Rr]elease/
+
+# Ignore compiled executables and large generated data in Answer folder
+exercises/homework/Answer/**/*.exe
+exercises/homework/Answer/**/*.ext
+exercises/homework/Answer/**/*.dat
+exercises/homework/Answer/**/sortedlargedata.dat
+exercises/homework/Answer/**/largedata.dat
+exercises/homework/Answer/**/f1.dat
+exercises/homework/Answer/**/f2.dat
+exercises/homework/Answer/**/f3.dat
+exercises/homework/Answer/**/sortedfile.dat
+
+# Ignore custom/unwanted compiled outputs in Answer folder
+exercises/homework/Answer/**/UseMyLib
+exercises/homework/Answer/**/t
+exercises/homework/Answer/**/UpgradeLog.XML
+exercises/homework/Answer/**/*.old
+exercises/homework/Answer/**/_UpgradeReport_Files/
+exercises/homework/Answer/**/*.cbx.local
+exercises/homework/Answer/**/*.local
+
+# IDE configurations
+.vscode/
+.idea/
+*.cbx.local
+*.local
