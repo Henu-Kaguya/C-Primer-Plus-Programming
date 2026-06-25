@@ -1,0 +1,31 @@
+name: Publish Release with Answer
+
+on:
+  push:
+    tags:
+      - 'v*' # Trigger on tags starting with v (e.g., v1.0.0)
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Zip Answer Folder
+        run: |
+          cd exercises/homework/Answer
+          zip -r ../../../Answer.zip .
+          cd ../../..
+
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          files: |
+            Answer.zip
+          generate_release_notes: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
